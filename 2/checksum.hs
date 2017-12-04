@@ -1,7 +1,6 @@
 import System.IO
 import Data.Array
 import qualified Data.Text as T
-import Debug.Trace (trace)
 
 readLines :: FilePath -> IO [T.Text]
 readLines = fmap T.lines . fmap T.pack . readFile
