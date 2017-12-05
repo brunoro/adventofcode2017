@@ -1,0 +1,40 @@
+name:                adventofcode2017
+version:             0.1.0.0
+synopsis:            2017 Adevent of Code solutions
+homepage:            https://github.com/brunoro/adventofcode2017
+license:             BSD3
+license-file:        LICENSE
+author:              Gustavo Brunoro
+maintainer:          git@hitnail.net
+copyright:           2017 Gustavo Brunoro
+category:            Other
+build-type:          Simple
+extra-source-files:  README.md
+cabal-version:       >=1.10
+
+-- To avoid duplicated efforts in documentation and dealing with the
+-- complications of embedding Haddock markup inside cabal files, it is
+-- common to point users to the README.md file.
+description:         Please see the README on Github at <https://github.com/githubuser/adventofcode2017#readme>
+
+executable day1
+  hs-source-dirs:      src
+  main-is:             day1.hs
+  build-depends:       base, array
+  default-language:    Haskell2010
+
+executable day2
+  hs-source-dirs:      src
+  main-is:             day2.hs
+  build-depends:       base,array,text
+  default-language:    Haskell2010
+
+executable day3
+  hs-source-dirs:      src
+  main-is:             day3.hs
+  build-depends:       base
+  default-language:    Haskell2010
+
+source-repository head
+  type:     git
+  location: https://github.com/brunoro/adventofcode2017

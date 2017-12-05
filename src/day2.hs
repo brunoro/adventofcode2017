@@ -1,3 +1,4 @@
+import System.Environment
 import System.IO
 import Data.Array
 import qualified Data.Text as T
@@ -24,5 +25,6 @@ sub (x, y) = y - x
 
 main :: IO ()
 main = do
-  lines <- readLines "input.txt"
+  filename <- fmap head $ getArgs
+  lines <- readLines $ filename
   print $ foldl (+) 0 $ map (sub . minMax . parseLine) $ lines

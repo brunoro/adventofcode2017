@@ -12,10 +12,12 @@ dist i = let
     in s + (abs $ mod (i - a) s) -- dist i<>center = axis<>center + dist axis<>i
   where
 
+up    (x, y) = (x, y + 1)
+down  (x, y) = (x, y - 1)
+left  (x, y) = (x - 1, y)
+right (x, y) = (x + 1, y)
+
+
 main :: IO ()
 main = do
-    print $ dist 1
-    print $ dist 12
-    print $ dist 23
-    print $ dist 1024
     print $ dist 277678

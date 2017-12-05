@@ -1,5 +1,6 @@
-import System.IO
-import Data.Array
+import System.Environment
+import System.IO()
+import Data.Array()
 
 seqPairs :: String -> [(Char, Char)]
 seqPairs x = zip x ((tail x) ++ [(head x)])
@@ -17,5 +18,6 @@ dropLast s = reverse $ drop 1 $ reverse $ s
 
 main :: IO ()
 main = do
-  numbers <- readFile "input.txt"
+  filename <- fmap head $ getArgs
+  numbers <- readFile $ filename
   print $ solveCaptcha $ dropLast $ numbers
