@@ -76,6 +76,7 @@ _stressTest m (p:ps) limit =
     let (nextM, val) = testPos m p
     in if val > limit then (nextM, val) else _stressTest nextM ps limit
 
+second :: (a, b) -> b
 second (_, x) = x
 
 stressTest :: Int -> Int

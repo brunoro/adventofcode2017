@@ -3,7 +3,6 @@ import System.IO()
 import Data.Array()
 import Data.List
 import qualified Data.Text as T
-import qualified Data.Char as C
 import qualified Data.Set as S
 
 import Debug.Trace (trace)
